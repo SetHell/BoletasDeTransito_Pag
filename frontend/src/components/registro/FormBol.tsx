@@ -49,7 +49,8 @@ export const FormularioBoleta = ({
         value={dat.placa}
         onChange={cambiar}
         max={LIM.placa}
-        onBlur={autocompletarVehiculoPorPlaca}
+        onBlur={editando ? undefined : autocompletarVehiculoPorPlaca}
+        disabled={editando}
       />
 
       {vehiculoMsg && <p className="avisoVehiculo">{vehiculoMsg}</p>}

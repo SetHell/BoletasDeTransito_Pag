@@ -285,3 +285,11 @@
   font-weight: 800;
   margin: 0;
 }
+
+.boletaFisica input:disabled,
+.boletaFisica select:disabled,
+.boletaFisica textarea:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  background: #e6e0bc;
+}

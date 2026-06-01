@@ -4,9 +4,8 @@ export const Guia = () => {
   return (
     <section className="panel">
         <h1>BOLETA DE INFRACCIÓN DE TRÁNSITO</h1>
-        <h2>GUÍA DEL FUNCIONARIO POLICIAL</h2>
       <div className="guiaHoja">
-
+        <h2>GUÍA DEL FUNCIONARIO POLICIAL</h2>
         {guiaArticulos.map((articulo) => (
           <div className="guiaArticulo" key={articulo.art}>
             <h3>
