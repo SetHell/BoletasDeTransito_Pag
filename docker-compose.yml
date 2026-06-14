@@ -1,0 +1,23 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./backend/.env
+    environment:
+      - FRONTEND_URL=http://localhost:5173
+    depends_on:
+      - ocr
+
+  ocr:
+    build: ./ocr-service
+    ports:
+      - "8000:8000"
