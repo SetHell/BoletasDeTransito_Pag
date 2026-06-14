@@ -1,0 +1,27 @@
+cd /c/Users/j/OneDrive/Escritorio/ProyectoPagBol
+
+cd /c/Users/j/OneDrive/Escritorio/ProyectoPagBol/backend
+npm run start:dev
+
+cd /c/Users/j/OneDrive/Escritorio/ProyectoPagBol/frontend
+npm run dev
+
+cd /c/Users/j/OneDrive/Escritorio/ProyectoPagBol/ocr-service
+unicorn main:app --reload --port 8000
+
+git
+
+# Ir a la raíz del proyecto
+cd /c/Users/j/OneDrive/Escritorio/ProyectoPagBol
+
+# Ver qué cambió
+git status
+
+# Agregar todos los cambios
+git add .
+
+# Commit con descripción clara
+git commit -m "fix: captchaToken en DTOs, campos nombres/apellidos en registro, api.ts completo"
+
+# Subir a GitHub (Render y Vercel se actualizan automáticamente)
+git push origin main
